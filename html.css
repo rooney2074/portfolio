@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=PT+Serif&family=Stardos+Stencil:wght@700&display=swap');
+
+.progress-container {
+    height: 0.8rem;
+    width: 100%;
+    border-radius: 0.4rem;
+  
+    background: black;
+  }
+  
+  .progress-container .progress {
+    height: 100%;
+    width: 0;
+    border-radius: 0.4rem;
+  
+    background: rgb(255, 255, 255);
+  
+    transition: width 0.4s ease;
+  }
+  body{
+    background-color: rgb(36, 36, 36);
+  }
+  #navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+/* #port{
+    border-bottom: 2px solid rgba(255,255,255,0);
+}
+#port:hover{
+    border-bottom: 2px solid white;
+    transition: 0.5s;
+} */
+#port::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+}
+
+#port:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
